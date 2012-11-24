@@ -5,8 +5,8 @@ def say(message):
     os.system("say '%s'" % (message))
 
 def say_and_print(message):
-    say(message)
     print message
+    say(message)
 
 def get_contextual_reply(message):
     l = [
@@ -50,4 +50,5 @@ def main():
         say_and_print(get_reply(human))
     say_and_print('Goodbye.')
 
-main()
+if __name__=='__main__':
+    main()
